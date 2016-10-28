@@ -1,0 +1,13 @@
+<a href="#/index">Home</a>
+<a href="#/question/{{questions._id}}">Go Back to Question</a>
+<button ng-click="deleteUser(userID)">Logout</button>
+
+<h1>{{questions.question}}</h1>
+<h3>{{questions.description}}</h3>
+
+<p style="color: red">{{error}}</p>
+<form ng-submit="addAnswer(questions._id, loggedInUser)">
+	Your Answer: <textarea ng-model="newAnswer.answer"></textarea>
+	Supporting details for your answer (optional): <textarea ng-model="newAnswer.details"></textarea>
+	<input type="submit" value="Submit">
+</form>
